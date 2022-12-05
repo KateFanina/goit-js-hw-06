@@ -12,3 +12,9 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+let ul = document.querySelector(".gallery");
+const liByImage = images.map(({url, alt}) => `<li ><img src=${url} alt=${alt} style="width: 252px; height: 150px;"/></li>`);
+ul.insertAdjacentHTML('beforeend', liByImage.join('\n'));
+ul.style.cssText = "display: flex; flex-direction: row; align-items: start; justify-content: space-around; list-style: none"
+console.log(ul);
