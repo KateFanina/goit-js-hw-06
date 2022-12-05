@@ -8,9 +8,11 @@ const ingredients = [
 ];
 
 let ul = document.getElementById("ingredients");
+const liList = [];
 for (const ingredient of ingredients) {
   const li = document.createElement("li");
   li.innerText = ingredient;
-  ul.appendChild(li);
+  liList.push(li.outerHTML);
 }
+ul.insertAdjacentHTML('beforeend', liList.join('\n'));
 console.log(ul)

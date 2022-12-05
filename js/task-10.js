@@ -23,6 +23,6 @@ create.addEventListener(CLICK, () => {
 
 destroy.addEventListener(CLICK, () => {
   boxes.innerHTML = '';
-  size = 30;
+  size = 20;
   count.value = '';
 });
